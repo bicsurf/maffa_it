@@ -6,10 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Presto-MaFfa.ch</title>
 
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
+    <x-navbar/>
 
+    
     {{ $slot }}
 
 <script src="{{ asset('js/app.js') }}"></script>

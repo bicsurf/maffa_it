@@ -10,19 +10,7 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{{route('login')}}">Login</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{{route('register')}}">Registrati</a>
-              </li>
-
-              <li class="nav-item">
-                <a href="" class="dropdown-item" onclick="event.preventDefault(); document.getElementById('form-logout').submit();">Log Out</a>
-                <form action="{{ route('logout') }}" method="POST" style="display: none"  id="form-logout">             
-                   @csrf
-                </form>           
-              </li>
+              
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Link
@@ -35,13 +23,42 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled">Link</a>
+                <a class="nav-link" href="{{ route('article.create') }}">Crea annuncio</a>
               </li>
+
+              <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+              
             </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+            @guest
+            <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+              <li class="nav-item">
+                <a class="nav-link" href="{{route('login')}}">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{route('register')}}">Registrati</a>
+              </li>
+              @endguest
+            </ul>
+              @auth
+
+            
+              
+              <div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">{{ Auth::user()->name }}</a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <a href="/logout" class="dropdown-item" onclick="event.preventDefault();document.getElementById('form-logout').submit();">Logout</a>
+                  <form action="{{ route('logout') }}" method="POST" style="display: none"  id="form-logout">             
+                     @csrf
+                  </form>
+
+                </ul>
+              </div>    
+              
+              @endauth
+            
           </div>
         </div>
     </nav>

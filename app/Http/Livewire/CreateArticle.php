@@ -15,7 +15,7 @@ class CreateArticle extends Component
     public $category;
 
  protected $rules = [
-     'title' => 'required|min:5|max:20', 
+     'title' => 'required|min:5|max:16', 
      'description' => 'required|min:20|max:50',
      'category'=>'required',
      'price' => 'required|min:1|max:9999|numeric',

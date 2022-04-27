@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use App\Models\Article;
 use Livewire\Component;
 use App\Models\Category;
+use Illuminate\Support\Facades\Auth;
 
 class CreateArticle extends Component
 {
@@ -25,15 +26,21 @@ class CreateArticle extends Component
     public function store()
     {
         $category = Category::find($this->category);
-        $category->articles()->create([
+        $this->validate();
+        $article=$category->articles()->create([
             'title'=>$this->title,
             'description'=>$this->description,
             'price'=>$this->price,
         ]);
-        $this->validate();
+        
+        Auth::user()->articles()->save($article);
+
+        session()->flash('message','Annuncio salvato correttamente');
+       
        
         $this->cleanForm();
     }
+
     public function updated($propertyName)
         {
          $this->validateOnly($propertyName);   

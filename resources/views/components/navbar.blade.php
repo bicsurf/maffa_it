@@ -13,13 +13,13 @@
               
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Link
-                </a>
+                  Categorie</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  @foreach ($categories as $category)
+                  <li><a class="dropdown-item" href="#">{{ $category->name }}</a></li>
+                  @endforeach
+                  
+                  
                 </ul>
               </li>
               <li class="nav-item">

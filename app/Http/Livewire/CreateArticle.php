@@ -11,12 +11,17 @@ class CreateArticle extends Component
     public $description;
     public $price;
 
-
+ protected $rules = [
+     'title' => 'required|min:5|max:20', 
+     'description' => 'required|min:20|max:50', 
+     'price' => 'required|min:1|max:9999|numeric',
+ ];
 
 
 
     public function store()
     {
+        $this->validate();
         Article::create([
             'title'=>$this->title,
             'description'=>$this->description,
@@ -24,8 +29,12 @@ class CreateArticle extends Component
         ]);
         $this->cleanForm();
     }
+    public function updated($propertyName)
+        {
+         $this->validateOnly($propertyName);   
+        }
 
-    public function cleanForm()
+            public function cleanForm()
      {
          $this->title = '';
          $this->description = '';

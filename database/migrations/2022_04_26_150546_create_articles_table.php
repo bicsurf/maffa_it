@@ -18,7 +18,7 @@ return new class extends Migration
 
             $table->string('title');
             $table->text('description');
-            $table->decimal('price', 4,2);
+            $table->decimal('price', 8,2);
             $table->string('city')->default('Milano');
 
             $table->timestamps();

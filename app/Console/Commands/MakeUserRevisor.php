@@ -12,14 +12,14 @@ class MakeUserRevisor extends Command
      *
      * @var string
      */
-    protected $signature = 'command:name';
+    protected $signature = 'presto:makeUserRevisor {email}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Rendi un utente revisore';
 
     /**
      * Execute the console command.

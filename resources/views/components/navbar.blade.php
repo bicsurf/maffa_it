@@ -13,6 +13,17 @@
                 <li class="nav-item">
                     <a class="nav-link active text-white" aria-current="page" href="{{ route('indexArticle') }}">Annunci</a>
                 </li>
+                @if (Auth::user()&& Auth::user()->is_revisor)
+                <li class="nav-item">
+                    <a class="nav-link btn btn-outline-success btn-sm position-reltive" aria-current="page" href="{{ route('revisor.index') }}">
+                        Zona revisore: {{App\Models\Article::toBeRevisonedCount()}}
+                        {{-- <span class="position-absulute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            {{App\Models\Article::toBeRevisonedCount()}}
+                            <span class="visually-hidden">unread messages</span>
+                        </span> --}}
+                    </a>
+                </li>
+                @endif
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-white" href="#" id="categoriesDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">

@@ -11281,7 +11281,14 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+*{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
 
+
+#style{
+    list-style: none;
+}
 
 .bg-nav-custom{
     background-color: #ffffff;

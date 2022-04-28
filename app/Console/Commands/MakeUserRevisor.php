@@ -3,7 +3,6 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use Illuminate\Foundation\Auth\User;
 
 class MakeUserRevisor extends Command
 {

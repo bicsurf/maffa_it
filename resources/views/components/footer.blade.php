@@ -1,7 +1,7 @@
 <div class="container-fluid bg-dark text-body footer mt-5 pt-5 ">
     
     <div class="container py-5">
-        <div class="row g-5">
+        <div class="row g-5 ">
             <div class="col-lg-3 col-md-6">
                 <h5 class="text-white mb-4">Address</h5>
                 <p class="text-white mb-2">123 Street, New York, USA</p>

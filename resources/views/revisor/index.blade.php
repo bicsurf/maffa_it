@@ -21,7 +21,6 @@
                         <p class="card-text">{{ $announcement_to_check->price }}</p>
                         <p class="my-2" href="#">Pubblicato il: {{ $announcement_to_check->created_at->format('d/m/Y') }}</p>
                         <a href="#">Categoria: {{ $announcement_to_check->category->name }}</a>
-                        <a href="{{ route('showArticle', compact('article')) }}" class="btn btn-primary"> Visualizza Prodotto </a>
                     </div>
                 </div>
             </div>

@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('articles', function (Blueprint $table) {
-          $table->boolean('is_accepted')->nullabe();
+          $table->boolean('is_accepted')->nullable();
         });
     }
 

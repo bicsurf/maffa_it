@@ -1,0 +1,40 @@
+
+#style{
+    list-style: none;
+}
+
+.bg-nav-custom{
+    background-color: #ffffff;
+}
+
+.text-white{
+    color:#424242 !important;
+    font-size: 20px;
+}
+
+.serch-button-navbar{
+    background-color: #d6680b !important;
+}
+
+.btn-custom{
+    background-color: #d6680b !important;
+}
+
+#search-navbar{
+    color: #ffffff !important;
+}
+
+/* HEADER */
+.masthead {
+    height:45vh;
+    min-height: 500px;
+    background-image:url(/img/header.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+  }
+
+  .logo{
+    height:50px;
+  }

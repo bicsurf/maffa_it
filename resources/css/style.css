@@ -1,6 +1,30 @@
 *{
-    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-family: 'Barlow Semi Condensed', sans-serif !important;
 }
+
+
+#card {
+    width: 300px;
+    box-shadow: 5px 5px 10px rgb(230, 228, 228);
+    overflow: hidden;
+
+
+}
+    
+    .img-tran:hover {
+        transform: scale(1.1);
+        
+        }
+        
+    .img-tran{
+        transition: all 2s;
+    
+    }
+    
+    .lit:hover {
+        color:#424242 !important;
+    }
+
 
 
 #style{
@@ -36,7 +60,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    
+
   }
 
   .logo{

@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-nav-custom ">
     <div class="container-fluid">
-        <a class="navbar-brand text-white" href="{{route('home')}}"><img class="logo" src="/img/logo.png" alt="logo"></a>
+        <a class="navbar-brand text-white me-5" href="{{route('home')}}"><img class="logo" src="/img/logo.png" alt="logo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
             aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -13,17 +13,7 @@
                 <li class="nav-item">
                     <a class="nav-link active text-white" aria-current="page" href="{{ route('indexArticle') }}">Annunci</a>
                 </li>
-                @if (Auth::user()&& Auth::user()->is_revisor)
-                <li class="nav-item">
-                    <a class="nav-link btn btn-outline-success btn-sm position-relative" aria-current="page" href="{{ route('revisor.index') }}">
-                        Revisore
-                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                            {{App\Models\Article::toBeRevisonedCount()}}
-                            <span class="visually-hidden">unread messages</span>
-                        </span> 
-                    </a>
-                </li>
-                @endif
+                
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-white" href="#" id="categoriesDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
@@ -37,14 +27,27 @@
                         @endforeach
                     </ul>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item me-5">
                     <a class="nav-link text-white" href="{{ route('article.create') }}">Crea annuncio</a>
                 </li>
-                <form class="d-flex">
+                <form class="d-flex ">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button id="search-navbar" class="btn btn-outline-light serch-button-navbar" type="submit">Search</button>
                 </form>
             </ul>
+            {{-- revisore --}}
+            @if (Auth::user()&& Auth::user()->is_revisor)
+            <li class="nav-item me-3">
+                <a class="nav-link text-light btn btn btn-custom btn-sm position-relative" aria-current="page" href="{{ route('revisor.index') }}">
+                    Revisore
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
+                        {{App\Models\Article::toBeRevisonedCount()}}
+                        <span class="visually-hidden">unread messages</span>
+                    </span> 
+                </a>
+            </li>
+            @endif
+
             @guest
                 <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                     <li class="nav-item">

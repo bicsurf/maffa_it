@@ -1,7 +1,7 @@
 <x-layout> 
    
     <div class="container">
-        <div class="row">
+        <div class="row jus">
             <div class="col-12 col-md-6">
                 <form method="post" action="{{route('login')}}">
                     @csrf
@@ -18,7 +18,9 @@
                         <label for="examplecheck1" class="form-check-label">Ricordati di me</label>
                     </div>
                     <button type="submit" class="btn btn-primary">Login</button>
+                    <a class="text-light btn btn-primary my-3" href="{{ route('register') }}">Registrati</a>
                 </form>
+               
             </div>
         </div>
     </div>

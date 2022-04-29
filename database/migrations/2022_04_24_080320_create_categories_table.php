@@ -21,16 +21,16 @@ return new class extends Migration
         });
 
         $names = [
-            'fotografia',
-            'telefonia',
-            'console e videogiochi',
-            'audio/video',
-            'accessori per animali',
-            'musica e film',
-            'biciclette',
-            'accessoti auto',
-            'libri e riviste',
-            'elettrodomestici',
+            'Fotografia',
+            'Telefonia',
+            'Console e videogiochi',
+            'Audio/video',
+            'Accessori per animali',
+            'Musica e film',
+            'Biciclette',
+            'Accessoti auto',
+            'Libri e riviste',
+            'Elettrodomestici',
         ];
         foreach ($names as $name){
             Category::create([

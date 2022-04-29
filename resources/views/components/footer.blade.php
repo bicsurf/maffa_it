@@ -18,7 +18,7 @@
                         <p class="mb-2">Registrati e clicca qui!</p>
                         <a href="{{route('become.revisor')}}" class="btn btn-primary text-ligth shadow my-3">Diventa revisore</a>
                     </div>
-
+        
             <div class="col-lg-3 col-md-6 mb-5">
                 
                 <p class="text-light">Inserisci la tua mail e sarai contattato al piu presto</p>
@@ -27,8 +27,12 @@
                     <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Invia</button>
                 </div>
             </div>
+
         </div>
     </div>
+
+    
+    
     <div class="container border-top border-1">
         <div class="copyright">
             <div class="row">

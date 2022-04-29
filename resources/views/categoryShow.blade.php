@@ -8,7 +8,7 @@
     </div>
     <div class="container">
         <div class="row">
-            @forelse ($category->articles as $article)
+            @forelse ($category->articles->sortByDesc('created_at') as $article)
                 <div class="col-12 col-md-4">
                     <div class="card" style="width: 18rem;">
                         <img src="https://picsum.photos/200" class="card-img-top" alt="...">
@@ -19,7 +19,7 @@
                             <p class="card-text">{{ $article->price }}</p>
                             <p class="my-2" href="#">Pubblicato il: {{ $article->created_at->format('d/m/Y') }}</p>
                             <a href="#">Categoria: {{ $article->category->name }}</a>
-                            <a href="#" class="btn btn-primary"> Visualizza Prodotto </a>
+                            <a href="{{ route('showArticle', compact('article')) }}" class="btn btn-primary"> Visualizza Prodotto </a>
                         </div>
                     </div>
                 </div>

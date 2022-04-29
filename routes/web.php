@@ -17,7 +17,7 @@ use App\Http\Controllers\RevisorController;
 */
 
 Route::get('/', [PublicController::class , 'home'])->name('home');
-
+//Rotta per Categoria
 Route::get('/categoria/{category}', [PublicController::class, 'categoryShow'])->name('categoryShow');
 
 Route::get('/creazione/article',[ArticleController::class,'create'])->name('article.create')->middleware('auth');

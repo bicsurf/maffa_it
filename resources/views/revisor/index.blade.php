@@ -28,36 +28,88 @@
 </div>
 <div class="row">
     <div class="col-12 col-md-6 text-end">
+       
+        
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#acceptModal">
+          Accetta
+        </button>
+
+    </div>
+
+
+    <div class="col-12 col-md-6 text-end">
+
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#rejectModal">
+        Rifiuta
+      </button>
+
+       
+    </div>
+</div>
+
+<div class="modal fade" id="acceptModal" tabindex="-1" aria-labelledby="acceptModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="acceptModalLabel">ATTENZIONE!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Sei sicuro di voler autorizzare questo articolo?
+      </div>
+      <div class="modal-footer">
+        
+
         <form action="{{route('revisor.accept_announcement', ['article'=>$announcement_to_check]) }}" method="post">
         @csrf
         @method('PATCH')
-        <button type="submit" class="btn btn-success shadow">Accetta</button>
+        <button type="submit" class="btn btn-success shadow" data-bs-dismiss="modal">SI</button>
+
         </form>
-    </div>
-    <div class="col-12 col-md-6 text-end">
-        <form action="{{route('revisor.reject_announcement', ['article'=>$announcement_to_check]) }}" method="post">
-        @csrf
-        @method('PATCH')
-        <button type="submit" class="btn btn-danger shadow">Rifiuta</button>
-        </form>
-    </div>
-</div>
-@endif
-<div id="myModal" class="modal" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Modal title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p>Modal body text goes here.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
+
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">NO</button>
+        
       </div>
     </div>
   </div>
+</div>
+
+
+
+
+<!-- Modale rifiuta -->
+<div class="modal fade" id="rejectModal" tabindex="-1" aria-labelledby="rejectModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="rejectModalLabel">ATTENZIONE!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Sei sicuro di voler rifiutare questo annuncio?
+      </div>
+      <div class="modal-footer">
+
+        <form action="{{route('revisor.reject_announcement', ['article'=>$announcement_to_check]) }}" method="post">
+          @csrf
+          @method('PATCH')
+          <button type="submit" class="btn btn-danger shadow" data-bs-dismiss="modal">SI</button>
+          </form>
+
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">NO</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+@endif
+
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+
+
 </x-layout>

@@ -30,9 +30,9 @@
                 <li class="nav-item me-5">
                     <a class="nav-link text-white" href="{{ route('article.create') }}">Crea annuncio</a>
                 </li>
-                <form class="d-flex ">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button id="search-navbar" class="btn btn-outline-light serch-button-navbar" type="submit">Search</button>
+                <form action="{{route('articles.search')}}" method="GET" class="d-flex ">
+                    <input name="searched" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button id="search-navbar" class="btn btn-outline-light serch-button-navbar" type="submit">Cerca</button>
                 </form>
             </ul>
             {{-- revisore --}}

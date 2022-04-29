@@ -36,3 +36,5 @@ Route::patch('/rifiuta/annuncio/{article}', [RevisorController::class,'rejectAnn
 Route::get('/richiesta/revisore', [RevisorController::class,'becomeRevisor'])->middleware('auth')->name('become.revisor');
 //Rendi utente revisore
 Route::get('/rendi/revisore/{user}',[RevisorController::class,'makeRevisor'])->name('make.revisor');
+//Ricerca annuncio
+Route::get('/ricerca/annuncio', [RevisorController::class ,'searchArticles'])->name('articles.search');

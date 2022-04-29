@@ -1,7 +1,7 @@
 <x-layout>
     <div class="container">
         <div class="row">
-            @foreach ($articles as $article)
+            @forelse ($articles as $article)
             <div class="col-12 col-md-4 my-3">
                 <div class="card" style="width: 18rem;">
                     <img src="https://picsum.photos/200" class="card-img-top" alt="Immagine Articolo">
@@ -16,7 +16,13 @@
                     </div>
                 </div>
             </div>
-            @endforeach
+            @empty
+                <div class="col-12">
+                    <div class="alert alert-warning py-3 shadow">
+                        <p class="lead"> Non ci sono annunci per questa ricerca.</p>
+                    </div>
+                </div>
+            @endforelse
             {{$articles->links()}}
         </div>
     </div>

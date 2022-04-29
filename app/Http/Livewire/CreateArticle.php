@@ -31,9 +31,10 @@ class CreateArticle extends Component
             'title'=>$this->title,
             'description'=>$this->description,
             'price'=>$this->price,
+            'user_id'=>Auth::user()->id,
         ]);
         
-        Auth::user()->articles()->save($article);
+        // Auth::user()->articles()->save($article);
 
         session()->flash('message','Annuncio salvato correttamente');
        

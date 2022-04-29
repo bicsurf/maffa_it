@@ -39,4 +39,9 @@ class RevisorController extends Controller
         Artisan::call('presto:makeUserRevisor',["email"=>$user->email]);
         return redirect('/')->with('message','Complimenti, l\'utente è un revisore');
     }
+
+    public function searchArticles(Request $request){
+        $articles = Article::search($request->searched)->where('is_accepted', true)->paginate(6);
+        return view('index', compact('articles'));
+    }
 }

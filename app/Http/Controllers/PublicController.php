@@ -10,7 +10,7 @@ class PublicController extends Controller
 {
     public function home() {
 
-        $articles = Article::orderBy('created_at', 'desc')->take(6)->get()->sortBy('created_at');
+        $articles = Article::where('is_accepted', true)->take(6)->get()->sortByDesc('created_at');
         return view('welcome', compact('articles'));
     }
 

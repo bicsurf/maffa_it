@@ -12,6 +12,11 @@
 
     @livewireStyles
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
 
 </head>
 <body>
@@ -22,6 +27,10 @@
 
     <x-footer/>
     @livewireScripts
+
     <script src="{{ asset('js/app.js') }}"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 </body>
 </html>

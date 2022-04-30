@@ -9,27 +9,46 @@
         </div>
       </header>
       
+
+
+
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          @foreach ($articles as $article)
+          <div class="swiper-slide">
+
+
+            
       <section class="container-fluid my-5 ">
         <div class="row justify-content-center">
-            @foreach ($articles as $article)
-            <div class="col-12 col-md-4 d-flex justify-content-center mb-3 ">
+       
+          <div class="col-12 col-md-3 d-flex justify-content-center mb-3">
+            <article class="card lit">
+            <img class="img-tran"  src="https://picsum.photos/200" >
+                <div class="card-body">
+                  <h6 class="card-title">{{ $article->user->name }}</h6>
+                  <h2 class="card-title">{{ Str::limit(" $article->title", 16, '') }}</h2>
+                  <p class="card-text">{{ Str::limit("$article->description", 15, '...') }}</p>
+                  <p class="card-text">{{ $article->price }}</p>
+                  <p class="my-2 d-flex justify-center" href="#">Pubblicato il: {{ $article->created_at->format('d/m/Y') }}</p>
+                  <a class="me-3 text-dark" href="#">Categoria: {{ $article->category->name }}</a>
+                  <a href="{{ route('showArticle', compact('article')) }}" class="btn bg-primary bg-gradient text-light"> Leggi di più </a>
+                                  
+                </div>
+            </article>
+          </div>
     
-                <article class="lit shadow" id="card ">
-                    <img  class="card-img-top img-tran" src="https://picsum.photos/200" >
-                    <div class="card-body">
-                        <h6 class="card-title">{{ $article->user->name }}</h6>
-                        <h2 class="card-title">{{ Str::limit(" $article->title", 16, '') }}</h2>
-                        <p class="card-text">{{ Str::limit("$article->description", 15, '...') }}</p>
-                        <p class="card-text">{{ $article->price }}</p>
-                        <p class="my-2 d-flex justify-center" href="#">Pubblicato il: {{ $article->created_at->format('d/m/Y') }}</p>
-                        <a class="me-3 text-dark" href="#">Categoria: {{ $article->category->name }}</a>
-                        <a href="{{ route('showArticle', compact('article')) }}" class="btn btn-primary"> Leggi di più </a>
-                    </div>
-                </article>
-    
-            </div>
-            @endforeach       
-        </div>  
-    </section>
-    
+        </div>
+        </section>
+
+          </div> 
+          @endforeach 
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+     
+      
+
 </x-layout>

@@ -13,7 +13,7 @@
                 <h5 class="card-title">Titolo: {{ $article->title }}</h5>
                 <p class="card-text">Descrizione: {{ $article->description }}</p>
                 <p class="card-text">Prezzo: {{ $article->price }}</p>
-                <a href="{{ route('categoryShow', ['category' => $article->category]) }}" class="my-2 border-top pt-2 border-dark card-link shadow btn btn-success">Categoria: {{ $article->category->name }}</a>
+                <a href="{{ route('categoryShow', ['category' => $article->category]) }}" class="my-2 border-top pt-2 border-dark card-link shadow btn bg-primary bg-gradient text-light">Categoria: {{ $article->category->name }}</a>
                 <p class="card-text">Pubblicato il: {{ $article->created_at->format('d/m/Y') }} - Autore {{ $article->user->name ?? '' }}</p>
             </div>
         </div>

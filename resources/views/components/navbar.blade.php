@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-nav-custom ">
-    <div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-light bg-nav-custom shadow fixed-top">
+    <div class="container-fluid ">
         <a class="navbar-brand text-white me-5" href="{{route('home')}}"><img class="logo" src="/img/logo.png" alt="logo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
             aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">

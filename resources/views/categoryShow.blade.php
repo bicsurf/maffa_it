@@ -1,15 +1,8 @@
 <x-layout>
     <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-4">
-                <h1>Tutti gli articoli:</h1>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
+        <div class="row ">
             @forelse ($category->articles->sortByDesc('created_at') as $article)
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-4 my-3">
                     <div class="card" style="width: 18rem;">
                         <img src="https://picsum.photos/200" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -24,11 +17,12 @@
                     </div>
                 </div>
             @empty
-                <div class="col-12 col-md-4">
-                    <p class="h1">Non sono presenti annunci per queste categorie</p>
-                    <h2>Pubblicane uno:
-                        <a href="{{ route('article.create') }}" class="btn btn-primary">Nuovo Annuncio</a>
-                    </h2>
+                
+                <div class="col-12 text-center my-5">
+                    <h1>ATTENZIONE:</h1>
+                    <p class="h1">Non sono presenti annunci per questa categoria</p>
+                    <h2 class="mt-5">Vuoi pubblicarne uno?</h2>
+                    <a href="{{ route('article.create') }}" class="btn btn-primary mt-4">Crea nuovo annuncio</a>
                 </div>
             @endforelse
         </div>

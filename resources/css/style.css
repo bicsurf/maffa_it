@@ -73,7 +73,7 @@
     }
 
 
-
+/* NAVBAR */
 .li-none{
     list-style: none;
 }
@@ -98,6 +98,9 @@
 #search-navbar{
     color: #ffffff !important;
 }
+.logo{
+    height:50px;
+  }
 
 /* HEADER */
 .masthead {
@@ -110,11 +113,21 @@
 
   }
 
-  .logo{
-    height:50px;
-  }
 
-.carousel-size{
-    height:20% ;
+
+/* SHOW-ARTICLE*/
+.custom-positioning{
+    display: inline-block;
+    
+    
 }
+#p-date{
+    margin-inline-start: 25%;
+}
+#hr-show{
+    margin-top:26%;
+}
+
+
+
   

@@ -1,14 +1,8 @@
 <x-layout>
-    <div class="container my-5">
-        <div class="row ">
-            <div class="col-12 col-md-4">
-                
-            </div>
-        </div>
-    </div>
-    <div class="container-flex">
-        <div  class="row ms-5 my-5">
-            <div  class="col-12 col-md-6">
+  
+    <div class="container">
+        <div  class="row  my-5">
+            <div  class="col-12 col-md-5">
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -37,14 +31,15 @@
                   </div>
             </div>
             
-            <div class="col-12 col-md-3">
-                <h1>{{ $article->title }}</h1>
+            <div class="col-12 col-md-7">
+                <h1>{{ $article->title }}</h1><hr>
                 <a href="{{ route('categoryShow', ['category' => $article->category]) }}" class="my-2 border-top pt-2 border-dark card-link shadow btn bg-primary bg-gradient text-light">{{ $article->category->name }}</a>
-
-                <p class="card-text">Prezzo: {{ $article->price }}</p>
+                <p class="card-text">Prezzo: {{ $article->price }}</p><hr>
+                <h5>Descrizione :</h5>
                 <p class="card-text">Descrizione: {{ $article->description }}</p>
-                
-                <p class="card-text">Pubblicato il: {{ $article->created_at->format('d/m/Y') }} - Autore {{ $article->user->name ?? '' }}</p>
+                <hr id="hr-show">
+                <h5 class="card-text custom-positioning">Contatta subito <strong>{{ $article->user->name ?? '' }}</strong> per avere più informazioni a riguardo</h5>
+                <p id="p-date" class="card-text custom-positioning">Pubblicato il: {{ $article->created_at->format('d/m/Y') }}  </p>
             </div>
         </div>
     </div>

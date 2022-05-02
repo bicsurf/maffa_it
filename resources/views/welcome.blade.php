@@ -54,12 +54,12 @@
   <div class="row justyfi-contend-center">
     <h1 class="text-center">Categorie</h1>
     <div class="col-12 col-md-3 botone my-5">
-      <img src="/img/fotografia.jpg" class="rounded-circle btn shadow me-3 d-flex align-items-center" href="#" alt="...">
+      <img src="/img/fotografia.jpg" class="rounded-circle btn shadow me-3 d-flex align-items-center" href="" alt="...">
       <h5 class="text-center">Fotografia</h5>
     </div>
 
     <div class="col-12 col-md-3 botone my-5 ">
-      <img src="https://picsum.photos/200" class="rounded-circle btn shadow me-3 d-flex align-items-center" href="#" alt="...">
+      <img src="/img/telefonia.jpg" class="rounded-circle btn shadow me-3 d-flex align-items-center" href="#" alt="...">
       <h5 class="text-center">Telefonia</h5>
     </div> 
     <div class="col-12 col-md-3 botone my-5">

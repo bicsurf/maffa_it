@@ -50,30 +50,27 @@
       </div>
      
       
-<div class="container-fluid my-5">
-  <div class="row justyfi-contend-center">
-    <h1 class="text-center">Categorie</h1>
-    <div class="col-12 col-md-3 botone my-5">
-      <img src="/img/fotografia.jpg" class="rounded-circle btn shadow me-3 d-flex align-items-center" href="" alt="...">
-      <h5 class="text-center">Fotografia</h5>
-    </div>
+  <div class="container-fluid my-5">
+    <div class="row justyfi-contend-center">
+      <h1 class="text-center">Categorie</h1>
+      <div class="col-12 col-md-3 botone my-5 d-flex align-items-center flex-column ">
+        <img src="/img/fotografia.jpg" class="rounded-circle btn shadow d-flex align-items-center my-2" href="" alt="...">
+        <h5 class="text-center">Fotografia</h5>
+      </div>
 
-    <div class="col-12 col-md-3 botone my-5 ">
-      <img src="/img/telefonia.jpg" class="rounded-circle btn shadow me-3 d-flex align-items-center" href="#" alt="...">
-      <h5 class="text-center">Telefonia</h5>
-    </div> 
-    <div class="col-12 col-md-3 botone my-5">
-      <img src="/img/juegos.jpg" class="rounded-circle btn shadow me-3 d-flex align-items-center" href="#" alt="...">
-      <h5 class="text-center">Console e Videogiochi</h5>
-    </div>
+      <div class="col-12 col-md-3 botone my-5 d-flex align-items-center flex-column ">
+        <img src="/img/telefonia.jpg" class="rounded-circle btn shadow d-flex align-items-center my-2" href="#" alt="...">
+        <h5 class="text-center">Telefonia</h5>
+      </div> 
+      <div class="col-12 col-md-3 botone my-5 d-flex align-items-center flex-column ">
+        <img src="/img/juegos.jpg" class="rounded-circle btn shadow d-flex align-items-center my-2" href="#" alt="...">
+        <h5 class="text-center">Console e Videogiochi</h5>
+      </div>
 
-    <div class="col-12 col-md-3 botone my-5 " >
-      <img src="/img/audiovideo.jpg" class="rounded-circle btn shadow me-3 d-flex align-items-center my-2"  href="#" alt="...">
-      <h5 class="d-flex align-items-center">Audio e Video</h5>
+      <div class="col-12 col-md-3 botone my-5 d-flex align-items-center flex-column " >
+        <img src="/img/audiovideo.jpg" class="rounded-circle btn shadow d-flex align-items-center my-2"  href="#" alt="...">
+        <h5 class="text-center">Audio e Video</h5>
+      </div>
     </div>
   </div>
-</div>
-      
-      
-
 </x-layout>

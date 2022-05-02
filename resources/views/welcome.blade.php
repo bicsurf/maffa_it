@@ -31,7 +31,7 @@
                   <p class="card-text">{{ Str::limit("$article->description", 15, '...') }}</p>
                   <p class="card-text">{{ $article->price }}</p>
                   <p class="my-2 d-flex justify-center" href="#">Pubblicato il: {{ $article->created_at->format('d/m/Y') }}</p>
-                  <a class="me-3 text-dark" href="#">Categoria: {{ $article->category->name }}</a>
+                  <a class="me-3 text-dark" href="{{ route('categoryShow', ['category'=>$article->category]) }}">Categoria: {{ $article->category->name }}</a>
                   <a href="{{ route('showArticle', compact('article')) }}" class="btn bg-primary bg-gradient text-light"> Leggi di più </a>
                                   
                 </div>

@@ -12,7 +12,7 @@
                         <p class="card-text">{{ Str::limit("$article->description", 15, '...') }}</p>
                         <p class="card-text">{{ $article->price }}</p>
                         <p class="my-2" href="#">Pubblicato il: {{ $article->created_at->format('d/m/Y') }}</p>
-                        <a href="#">Categoria: {{ $article->category->name }}</a>
+                        <a class="me-3 text-dark" href="{{ route('categoryShow', ['category'=>$article->category]) }}">Categoria: {{ $article->category->name }}</a>
                         <a href="{{ route('showArticle', compact('article')) }}" class="btn btn-primary"> Visualizza Prodotto </a>
                     </div>
                 </div>

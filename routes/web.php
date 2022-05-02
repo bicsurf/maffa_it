@@ -38,3 +38,5 @@ Route::get('/richiesta/revisore', [RevisorController::class,'becomeRevisor'])->m
 Route::get('/rendi/revisore/{user}',[RevisorController::class,'makeRevisor'])->name('make.revisor');
 //Ricerca annuncio
 Route::get('/ricerca/annuncio', [RevisorController::class ,'searchArticles'])->name('articles.search');
+//cambio lingua
+Route::post('/lingua/{lang}',[PublicController::class,'setLanguage'])->name('set_language_locale');

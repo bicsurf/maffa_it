@@ -1,7 +1,7 @@
 <x-layout>
     <div class="container">
         <div class="row ">
-            @forelse ($category->articles->sortByDesc('created_at') as $article)
+            @forelse ($category->articles->where('is_accepted', true)->sortByDesc('created_at') as $article)
                 <div class="col-12 col-md-4 my-3">
                     <div class="card" style="width: 18rem;">
                         <img src="https://picsum.photos/200" class="card-img-top" alt="...">

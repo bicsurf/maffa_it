@@ -1,6 +1,7 @@
 <x-layout>
     <div class="container">
         <div class="row">
+            
             @forelse ($articles as $article)
             <div class="col-12 col-md-4 my-3">
                 <div class="card" style="width: 18rem;">

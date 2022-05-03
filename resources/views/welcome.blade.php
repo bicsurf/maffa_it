@@ -83,11 +83,10 @@
         <h5 class="text-center">Musica e Film</h5>
       </div>
 
-<<<<<<< HEAD
+
     <div class="col-12 col-md-3 botone my-5 d-flex align-items-center flex-column" >
       <img src="/img/audiovideo.jpg" class="rounded-circle btn shadow me-3 d-flex align-items-center my-2"  href="#" alt="...">
       <h5 class="text-center">Audio e Video</h5>
-=======
       <div class="col-12 col-md-3 botone my-5 d-flex align-items-center flex-column " >
         <img src="/img/bici.jpg" class="rounded-circle btn shadow d-flex align-items-center my-2"  href="#" alt="...">
         <h5 class="text-center">Bicciclete</h5>
@@ -104,7 +103,6 @@
         <img src="/img/elettrodomestici.jpg" class="rounded-circle btn shadow d-flex align-items-center my-2"  href="#" alt="...">
         <h5 class="text-center">Elettrodomestici</h5>
       </div>
->>>>>>> 45e906397c5b8d0e47ea260316904b91c4ae8fcf
     </div>
   </div>
 

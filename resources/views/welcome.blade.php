@@ -10,7 +10,7 @@
       </header>
       
 
-      <h1 class="my-5 text-center">Prodotti</h1>
+      <h3 class="my-5 text-center">PRODOTTI</h3>
 
 
     <div class="swiper mySwiper">
@@ -24,7 +24,7 @@
 
                   <div class="col-12  d-flex justify-content-center mb-3 ">
                     <article class="card lit shadow">
-                      <img src="{{ !$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300):'https://picsum.photos/200'}}" class="card-img-top" alt="Immagine Articolo">
+                      <img src="{{ !$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300):'https://picsum.photos/200'}}" class="card-img-top img-tran" alt="Immagine Articolo">
                         <div class="card-body">
                           <h6 class="card-title">{{ $article->user->name }}</h6>
                           <h2 class="card-title">{{ Str::limit(" $article->title", 16, '') }}</h2>
@@ -49,68 +49,90 @@
               <div class="swiper-pagination"></div>
   </div>
           
-            
-      <div class="container-fluid my-5">
-        <div class="row justyfi-contend-center">
-            <h1 class="text-center">Categorie</h1>
+  <h3 class="my-5 text-center">CATEGORIE</h3>
+  {{-- CAREGORIE --}}
 
-            <div class="col-12 col-md-3 botone my-5 d-flex align-items-center flex-column ">
-              <img src="/img/fotografia.jpg" class="rounded-circle btn shadow d-flex align-items-center my-2" href=" " alt="...">
-              <h5 class="text-center">Fotografia</h5>
-            </div>
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
 
-            <div class="col-12 col-md-3 botone my-5 d-flex align-items-center flex-column ">
-              <img src="/img/telefonia.jpg" class="rounded-circle btn shadow d-flex align-items-center my-2" href="#" alt="...">
-              <h5 class="text-center">Telefonia</h5>
-            </div> 
-            <div class="col-12 col-md-3 botone my-5 d-flex align-items-center flex-column ">
-              <img src="/img/juegos.jpg" class="rounded-circle btn shadow d-flex align-items-center my-2" href="#" alt="...">
-              <h5 class="text-center">Console e Videogiochi</h5>
-            </div>
+      <div class="carousel-item active">
+        <div class=" d-flex justify-content-between">
+        <div class="col-12 col-md-3  my-5 d-flex align-items-center flex-column w-25">
+          <a href="{{ route('categoryShow','1') }} "><img src="/img/fotografia.jpg" class="rounded-circle btn shadow d-flex align-items-center my-2"></a>
+          <h5 class="text-center">Fotografia</h5>
+          
+        </div>
 
-            <div class="col-12 col-md-3 botone my-5 d-flex align-items-center flex-column " >
-              <img src="/img/audiovideo.jpg" class="rounded-circle btn shadow d-flex align-items-center my-2"  href="#" alt="...">
-              <h5 class="text-center">Audio e Video</h5>
-            </div>
+        <div class="col-12 col-md-3  my-5 d-flex align-items-center flex-column w-25">
+          <a href="{{ route('categoryShow','2') }} "><img src="/img/telefonia.jpg" class="rounded-circle btn shadow d-flex align-items-center my-2"></a>
+          <h5 class="text-center">Telefonia</h5>
+        </div> 
+        <div class="col-12 col-md-3 my-5 d-flex align-items-center flex-column w-25">
+          <a href="{{ route('categoryShow','3') }} "><img src="/img/juegos.jpg" class="rounded-circle btn shadow d-flex align-items-center my-2"></a>
+          <h5 class="text-center">Console e Videogiochi</h5>
+        </div>
 
-            <div class="col-12 col-md-3 botone my-5 d-flex align-items-center flex-column " >
-              <img src="/img/animali.jpg" class="rounded-circle btn shadow d-flex align-items-center my-2"  href="#" alt="...">
-              <h5 class="text-center">Accessori per Animali</h5>
-            </div>
-
-            <div class="col-12 col-md-3 botone my-5 d-flex align-items-center flex-column " >
-              <img src="/img/musicafilm.jpg" class="rounded-circle btn shadow d-flex align-items-center my-2"  href="#" alt="...">
-              <h5 class="text-center">Musica e Film</h5>
-            </div>
-
-            <div class="col-12 col-md-3 botone my-5 d-flex align-items-center flex-column" >
-              <img src="/img/audiovideo.jpg" class="rounded-circle btn shadow me-3 d-flex align-items-center my-2"  href="#" alt="...">
-              <h5 class="text-center">Audio e Video</h5>
-            </div>
-
-            <div class="col-12 col-md-3 botone my-5 d-flex align-items-center flex-column " >
-                <img src="/img/bici.jpg" class="rounded-circle btn shadow d-flex align-items-center my-2"  href="#" alt="...">
-                <h5 class="text-center">Bicciclete</h5>
-            </div>
-
-            <div class="col-12 col-md-3 botone my-5 d-flex align-items-center flex-column " >
-                <img src="/img/auto.jpg" class="rounded-circle btn shadow d-flex align-items-center my-2"  href="#" alt="...">
-                <h5 class="text-center">Accessori Auto</h5>
-            </div>
-
-            <div class="col-12 col-md-3 botone my-5 d-flex align-items-center flex-column " >
-                <img src="/img/libri.jpg" class="rounded-circle btn shadow d-flex align-items-center my-2"  href="#" alt="...">
-                <h5 class="text-center">Libri e Reviste</h5>
-            </div>
-
-            <div class="col-12 col-md-3 botone my-5 d-flex align-items-center flex-column " >
-                <img src="/img/elettrodomestici.jpg" class="rounded-circle btn shadow d-flex align-items-center my-2"  href="#" alt="...">
-                <h5 class="text-center">Elettrodomestici</h5>
-            </div>
-            
-         </div>
-    
+        <div class="col-12 col-md-3 my-5 d-flex align-items-center flex-column w-25" >
+          <a href="{{ route('categoryShow','4') }} "><img src="/img/audiovideo.jpg" class="rounded-circle btn shadow d-flex align-items-center my-2"></a>
+          <h5 class="text-center">Audio e Video</h5>
+        </div>
       </div>
+     </div>
+
+     <div class="carousel-item ">
+      <div class=" d-flex justify-content-between">
+        <div class="col-12 col-md-3 my-5 d-flex align-items-center flex-column " >
+          <a href="{{ route('categoryShow','5') }} "><img src="/img/animali.jpg" class="rounded-circle btn shadow d-flex align-items-center my-2"></a>
+          <h5 class="text-center">Accessori per Animali</h5>
+        </div>
+  
+        <div class="col-12 col-md-3 my-5 d-flex align-items-center flex-column " >
+          <a href="{{ route('categoryShow','6') }} "><img src="/img/musicafilm.jpg" class="rounded-circle btn shadow d-flex align-items-center my-2"></a>
+          <h5 class="text-center">Musica e Film</h5>
+        </div>
+  
+        <div class="col-12 col-md-3 my-5 d-flex align-items-center flex-column " >
+          <a href="{{ route('categoryShow','7') }} "><img src="/img/bici.jpg" class="rounded-circle btn shadow d-flex align-items-center my-2"></a>
+            <h5 class="text-center">Biciclette</h5>
+        </div>
+  
+        <div class="col-12 col-md-3 my-5 d-flex align-items-center flex-column " >
+          <a href="{{ route('categoryShow','8') }} "><img src="/img/auto.jpg" class="rounded-circle btn shadow d-flex align-items-center my-2"></a>
+            <h5 class="text-center">Accessori Auto</h5>
+        </div>
+    </div>
+   </div>
+
+   <div class="carousel-item ">
+    <div class=" d-flex justify-content-around">
+      <div class="col-12 col-md-3 my-5 d-flex align-items-center flex-column " >
+        <a href="{{ route('categoryShow','9') }} "><img src="/img/libri.jpg" class="rounded-circle btn shadow d-flex align-items-center my-2"></a>
+          <h5 class="text-center">Libri e Reviste</h5>
+      </div>
+
+      <div class="col-12 col-md-3 my-5 d-flex align-items-center flex-column " >
+        <a href="{{ route('categoryShow','10') }} "><img src="/img/elettrodomestici.jpg" class="rounded-circle btn shadow d-flex align-items-center my-2"></a>
+          <h5 class="text-center">Elettrodomestici</h5>
+      </div>
+
+  </div>
+ </div>
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  
+
+
+
+
 
 
 {{-- lavora con noi --}}
@@ -119,13 +141,13 @@
   <div class="container h-100 " >
     <div class="row h-100 align-items-center">
       <div class="col-12 text-start">
-        <h1 class="fw-light">Lavora con noi</h1>
-        <p class="lead">Hai volontà, motivazione e spirito d’iniziativa? <br>Siamo alla ricerca di te! L'esperienza che porterai con te <br>ci aiuterà a offrire un servizio da remoto di eccellenza. <br> una persona brava, ma brava davvero. Potresti essere tu!</p>
+        <h1 class="fw-light">Lavora con noi!</h1>
+        <p class="lead">Hai volontà, motivazione e spirito d’iniziativa? <br>Siamo alla ricerca di te! L'esperienza che porterai con te <br>ci aiuterà a offrire un servizio da remoto di eccellenza. <br>Abbiamo bisogno di una persona brava, ma brava davvero.<br> Potresti essere tu.</p>
         <a href="" class="btn bg-primary bg-gradient text-light"> ENVIA LA CANDIDATURA </a>
       </div>
     </div>
   </div>
-<div>
+</div>
 
 
 

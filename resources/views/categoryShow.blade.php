@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container">
+    <div class="container my-5">
         <div class="row ">
             @forelse ($category->articles->where('is_accepted', true)->sortByDesc('created_at') as $article)
                 <div class="col-12 col-md-4 my-3">

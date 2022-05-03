@@ -34,6 +34,9 @@
                     <input name="searched" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button id="search-navbar" class="btn btn-outline-light serch-button-navbar" type="submit">Cerca</button>
                 </form>
+                <li class="nav-item"><x-_locale lang='it' nation='it'/></li>
+                <li class="nav-item"><x-_locale lang='en' nation='gb'/></li>
+                <li class="nav-item"><x-_locale lang='es' nation='es'/></li>
             </ul>
             {{-- revisore --}}
             @if (Auth::user()&& Auth::user()->is_revisor)

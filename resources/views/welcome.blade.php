@@ -26,7 +26,7 @@
        
           <div class="col-12  d-flex justify-content-center mb-3 ">
             <article class="card lit shadow">
-            <img class="img-tran"  src="https://picsum.photos/200" >
+              <img src="{{ !$article->images()->get()->isEmpty() ? Storage::url($article->images()->first()->path):'https://picsum.photos/200'}}" class="card-img-top" alt="Immagine Articolo">
                 <div class="card-body">
                   <h6 class="card-title">{{ $article->user->name }}</h6>
                   <h2 class="card-title">{{ Str::limit(" $article->title", 16, '') }}</h2>

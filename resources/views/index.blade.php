@@ -5,7 +5,7 @@
             @forelse ($articles as $article)
             <div class="col-12 col-md-4 my-3">
                 <div class="card" style="width: 18rem;">
-                    <img src="{{ !$article->images()->get()->isEmpty() ? Storage::url($article->images()->first()->path):'https://picsum.photos/200'}}" class="card-img-top" alt="Immagine Articolo">
+                    <img src="{{ !$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300):'https://picsum.photos/200'}}" class="card-img-top" alt="Immagine Articolo">
                     <div class="card-body">
                         <h6 class="card-title">{{ $article->user->name }}</h6>
                         <h2 class="card-title">{{ $article->title }}</h2>

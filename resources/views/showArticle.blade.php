@@ -11,7 +11,7 @@
             @foreach ($article->images as $image)
             
             <div class="carousel-item @if($loop->first)active @endif">
-              <img src="{{ Storage::url($image->path) }}" class="card-img-top" alt="Immagine Articolo">
+              <img src="{{$image->getUrl(400,300) }}" class="card-img-top" alt="Immagine Articolo">
             </div>
             
             @endforeach

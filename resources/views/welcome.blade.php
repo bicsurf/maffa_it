@@ -83,7 +83,7 @@
         <h5 class="text-center">Musica e Film</h5>
       </div>
 
-    <div class="col-12 col-md-3 botone my-5 d-flex flex-column" >
+    <div class="col-12 col-md-3 botone my-5 d-flex align-items-center flex-column" >
       <img src="/img/audiovideo.jpg" class="rounded-circle btn shadow me-3 d-flex align-items-center my-2"  href="#" alt="...">
       <h5 class="text-center">Audio e Video</h5>
     </div>

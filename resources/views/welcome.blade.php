@@ -83,6 +83,40 @@
         <h5 class="text-center">Musica e Film</h5>
       </div>
 
+      <div class="col-12 col-md-3 botone my-5 d-flex align-items-center flex-column " >
+        <img src="/img/bici.jpg" class="rounded-circle btn shadow d-flex align-items-center my-2"  href="#" alt="...">
+        <h5 class="text-center">Bicciclete</h5>
+      </div>
+      <div class="col-12 col-md-3 botone my-5 d-flex align-items-center flex-column " >
+        <img src="/img/auto.jpg" class="rounded-circle btn shadow d-flex align-items-center my-2"  href="#" alt="...">
+        <h5 class="text-center">Accessori Auto</h5>
+      </div>
+      <div class="col-12 col-md-3 botone my-5 d-flex align-items-center flex-column " >
+        <img src="/img/libri.jpg" class="rounded-circle btn shadow d-flex align-items-center my-2"  href="#" alt="...">
+        <h5 class="text-center">Libri e Reviste</h5>
+      </div>
+      <div class="col-12 col-md-3 botone my-5 d-flex align-items-center flex-column " >
+        <img src="/img/elettrodomestici.jpg" class="rounded-circle btn shadow d-flex align-items-center my-2"  href="#" alt="...">
+        <h5 class="text-center">Elettrodomestici</h5>
+      </div>
     </div>
   </div>
+
+
+{{-- lavora con noi --}}
+
+<div class="boxLavora">
+  <div class="container h-100 " >
+    <div class="row h-100 align-items-center">
+      <div class="col-12 text-start">
+        <h1 class="fw-light">Lavora con noi</h1>
+        <p class="lead">Hai volontà, motivazione e spirito d’iniziativa? <br>Siamo alla ricerca di te! L'esperienza che porterai con te <br>ci aiuterà a offrire un servizio da remoto di eccellenza. <br> una persona brava, ma brava davvero. Potresti essere tu!</p>
+        <a href="" class="btn bg-primary bg-gradient text-light"> ENVIA LA CANDIDATURA </a>
+      </div>
+    </div>
+  </div>
+<div>
+
+
+
 </x-layout>

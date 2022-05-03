@@ -67,9 +67,9 @@
       <h5 class="text-center">Console e Videogiochi</h5>
     </div>
 
-    <div class="col-12 col-md-3 botone my-5 " >
+    <div class="col-12 col-md-3 botone my-5 d-flex flex-column" >
       <img src="/img/audiovideo.jpg" class="rounded-circle btn shadow me-3 d-flex align-items-center my-2"  href="#" alt="...">
-      <h5 class="d-flex align-items-center">Audio e Video</h5>
+      <h5 class="text-center">Audio e Video</h5>
     </div>
   </div>
 </div>

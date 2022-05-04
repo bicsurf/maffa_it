@@ -68,9 +68,9 @@
               </div>
               {{-- Semafori validazione immagine caricata dall'utente --}}
               @foreach ($announcement_to_check->images as $image)
-                <div class="col-md-3">
+                <div class="col-md-12">
                     <div class="card-body">
-                      <span class="text-success fa-solid fa-circle"></span>
+                     
                         <h5 class="tc-accent">Revisione Immagini</h5>
                         <p>Adulti: <span class="{{ $image->adult }}"></span></p>
                         <p>Satira: <span class="{{ $image->spoof }}"></span></p>

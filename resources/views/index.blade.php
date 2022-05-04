@@ -3,7 +3,7 @@
         <div class="row justify-content-center">
             
             @forelse ($articles as $article)
-            <div class="col-12 col-md-4 my-3">
+            <div class="col-12 col-md-4 my-3 d-flex justify-content-center">
                 <div class="card shadow" style="width: 18rem;">
                     <img src="{{ !$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300):'https://picsum.photos/200'}}" class="card-img-top img-tran " alt="Immagine Articolo">
                     <div class="card-body">

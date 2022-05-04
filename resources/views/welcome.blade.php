@@ -30,9 +30,9 @@
                           <h2 class="card-title">{{ Str::limit(" $article->title", 16, '') }}</h2>
                           <p class="card-text">{{ Str::limit("$article->description", 15, '...') }}</p>
                           <p class="card-text">{{ $article->price }}</p>
-                          <p class="my-2 d-flex justify-center" href="#">Pubblicato il: {{ $article->created_at->format('d/m/Y') }}</p>
-                          <a class="me-3 text-dark" href="{{ route('categoryShow', ['category'=>$article->category]) }}">Categoria: {{ $article->category->name }}</a>
-                          <a href="{{ route('showArticle', compact('article')) }}" class="btn bg-primary bg-gradient text-light"> Leggi di più </a>
+                          <p class="my-2 " href="#">Pubblicato il: {{ $article->created_at->format('d/m/Y') }}</p>
+                          <a class="me-3 text-dark my-5" href="{{ route('categoryShow', ['category'=>$article->category]) }}">Categoria: {{ $article->category->name }}</a>
+                          <a href="{{ route('showArticle', compact('article')) }}" class="btn bg-primary bg-gradient text-light"> Visualizza Prodotto </a>
                                           
                         </div>
                     </article>

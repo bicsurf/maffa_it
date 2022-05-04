@@ -9,8 +9,8 @@
     </div>
     @endif
 
-    <div class="container my-5">
-        <div class="row jus">
+    <div class="container my-5 ">
+        <div class="row">
             <div class="col-12 col-md-6">
                 <form method="post" action="{{route('login')}}">
                     @csrf

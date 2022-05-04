@@ -11295,6 +11295,23 @@ textarea.form-control-lg {
     justify-content: center;
     align-items: center;
 }
+.lavoraShow {
+    background:url('/img/lavoraShow.jpg');
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lavoraForm {
+    background:url('/img/form.jpg');
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .botone{
     width:40px;

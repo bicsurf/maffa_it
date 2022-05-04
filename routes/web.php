@@ -15,6 +15,7 @@ use App\Http\Controllers\RevisorController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/lavora', [PublicController::class , 'lavoraShow'])->name('lavoraShow');
 
 Route::get('/', [PublicController::class , 'home'])->name('home');
 //Rotta per Categoria

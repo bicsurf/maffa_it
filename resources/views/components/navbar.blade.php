@@ -15,7 +15,7 @@
                 </li>
                 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="#" id="categoriesDropdown" role="button"
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="linguaDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Categorie</a>
                     <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
@@ -34,6 +34,26 @@
                     <input name="searched" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button id="search-navbar" class="btn btn-outline-light serch-button-navbar" type="submit">Cerca</button>
                 </form>
+
+        {{-- lingua --}}
+            <li class="nav-item dropdown me-5">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="linguaDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Lingua</a>
+                <ul class="dropdown-menu" aria-labelledby="categoriesDropdown" >
+                    <li class="nav-item"><x-_locale lang='it' nation='it'/></li>
+                    <li class="nav-item"><x-_locale lang='en' nation='gb'/></li>
+                    <li class="nav-item"><x-_locale lang='es' nation='es'/></li>
+
+                        
+                        <li>
+                        <hr class="dropdown-divider">
+                        </li>
+                    
+                </ul>
+            </li>
+
+
             </ul>
             {{-- revisore --}}
             @if (Auth::user()&& Auth::user()->is_revisor)

@@ -28,7 +28,7 @@ return new class extends Migration
             'Accessori per animali',
             'Musica e film',
             'Biciclette',
-            'Accessoti auto',
+            'Accessori auto',
             'Libri e riviste',
             'Elettrodomestici',
         ];

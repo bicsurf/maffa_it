@@ -8,20 +8,13 @@
             </div>
         </div>
     </header>
-
-
     <h3 class="my-5 text-center">PRODOTTI</h3>
-
-
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
             @foreach ($articles as $article)
                 <div class="swiper-slide">
-
-
                     <section class="container-fluid my-5 ">
                         <div class="row justify-content-center">
-
                             <div class="col-12  d-flex justify-content-center mb-3 ">
                                 <article class="card lit shadow">
                                     <img src="{{ !$article->images()->get()->isEmpty()? $article->images()->first()->getUrl(400, 300): 'https://picsum.photos/200' }}"
@@ -39,14 +32,11 @@
                                             {{ $article->category->name }}</a>
                                         <a href="{{ route('showArticle', compact('article')) }}"
                                             class="btn bg-primary bg-gradient text-light"> Visualizza Prodotto </a>
-
                                     </div>
                                 </article>
                             </div>
-
                         </div>
                     </section>
-
                 </div>
             @endforeach
         </div>

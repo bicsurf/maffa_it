@@ -9,10 +9,10 @@
 
 <body>
 
-    <h2>l'utente {{ $user->name }} ha richiesto di diventare revisore</h2>
+    <h2>L'utente {{ $user->name }} ha richiesto di diventare revisore</h2>
     <p>{{ $user->email }}</p>
 
     <a href="{{ route('make.revisor',compact('user'))}}">Rendi revisore</a>
-    
+
 </body>
 </html>

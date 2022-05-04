@@ -25,4 +25,8 @@ class PublicController extends Controller
        return redirect()->back();
         
     }
+    public function lavoraShow() 
+    {
+        return view('lavora');
+    }
 }

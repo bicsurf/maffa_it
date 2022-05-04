@@ -164,7 +164,7 @@
                         te! L'esperienza che porterai con te <br>ci aiuterà a offrire un servizio da remoto di
                         eccellenza. <br>Abbiamo bisogno di una persona brava, ma brava davvero.<br> Potresti essere tu.
                     </p>
-                    <a href="" class="btn bg-primary bg-gradient text-light"> ENVIA LA CANDIDATURA </a>
+                    <a href="{{route('lavoraShow')}}" class="btn bg-primary bg-gradient text-light"> ENVIA LA CANDIDATURA </a>
                 </div>
             </div>
         </div>

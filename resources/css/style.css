@@ -45,7 +45,7 @@
   }
   .botone:hover{
     opacity: 0.50;
-  
+
     filter:alpha (opacity=50);
   }
   .botone a{
@@ -53,7 +53,7 @@
     text-decoration:none;
     padding:5px 5px 5px 0;
   }
-  
+
 
 .swiper {
     width: 100%;
@@ -86,14 +86,14 @@
     height: 100%;
     object-fit: cover;
   }
-  
+
   .card-container {
 
     margin-top: 10px;
     margin-bottom: 10px;
     display: flex;
     justify-content: center;
-    
+
 }
 
 .card{
@@ -107,19 +107,18 @@
     cursor: pointer;
 
 }
-    
-        
+
+
     .img-tran{
         transition: all 500ms ease-out;
-    
     }
 
 
     .img-tran:hover {
         transform: scale(1.1);
-        
+
         }
-    
+
     .lit:hover {
         color:#424242 !important;
     }
@@ -168,14 +167,12 @@
 
 
 /* SHOW-ARTICLE*/
-.custom-positioning{
+/* .custom-positioning{
     display: inline-block;
-    
-    
-}
-#p-date{
+} */
+/* #p-date{
     margin-inline-start: 25%;
-}
+} */
 #hr-show{
     margin-top:26%;
 }

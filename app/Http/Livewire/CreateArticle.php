@@ -7,6 +7,7 @@ use Livewire\Component;
 use App\Models\Category;
 use App\Jobs\ResizeImage;
 use Livewire\WithFileUploads;
+use App\Jobs\GoogleVisionSafeSearch;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 
@@ -22,30 +23,32 @@ class CreateArticle extends Component
     public $temporary_images;
     public $images = [];
 
- protected $rules = [
-     'title' => 'required|min:5|max:16',
-     'description' => 'required|min:20|max:500',
-     'category'=>'required',
-     'price' => 'required|min:1|max:9999|numeric',
-     'images.*' => 'image|max:1024',
-     'temporary_images.*' => 'image|max:1024'
- ];
+    protected $rules = [
+        'title' => 'required|min:5|max:16',
+        'description' => 'required|min:20|max:500',
+        'category' => 'required',
+        'price' => 'required|min:1|max:9999|numeric',
+        'images.*' => 'image|max:1024',
+        'temporary_images.*' => 'image|max:1024'
+    ];
 
- public function updatedTemporaryImages(){
-     if($this->validate([
-         'temporary_images.*'=>'image|max:1024',
-     ])){
-         foreach ($this->temporary_images as $image) {
-             $this->images[] = $image;
-         }
-     }
- }
-
- public function removeImage($key){
-    if(in_array($key, array_keys($this->images))){
-        unset($this->images[$key]);
+    public function updatedTemporaryImages()
+    {
+        if ($this->validate([
+            'temporary_images.*' => 'image|max:1024',
+        ])) {
+            foreach ($this->temporary_images as $image) {
+                $this->images[] = $image;
+            }
+        }
     }
- }
+
+    public function removeImage($key)
+    {
+        if (in_array($key, array_keys($this->images))) {
+            unset($this->images[$key]);
+        }
+    }
 
 
 
@@ -54,17 +57,18 @@ class CreateArticle extends Component
         $this->validate();
 
         $this->article = Category::find($this->category)->articles()->create($this->validate());
-      
-            $this->article->user()->associate(Auth::user());
-            $this->article->save();
 
-        if(count($this->images)){
-            foreach($this->images as $image){
+        $this->article->user()->associate(Auth::user());
+        $this->article->save();
 
-            $newFileName = "articles/{$this->article->id}";
-            $newImage = $this->article->images()->create(['path'=>$image->store($newFileName,'public')]);
+        if (count($this->images)) {
+            foreach ($this->images as $image) {
 
-            dispatch(new ResizeImage($newImage->path, 400, 300));
+                $newFileName = "articles/{$this->article->id}";
+                $newImage = $this->article->images()->create(['path' => $image->store($newFileName, 'public')]);
+
+                dispatch(new ResizeImage($newImage->path, 400, 300));
+                dispatch(new GoogleVisionSafeSearch($newImage->id));
             }
 
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
@@ -73,26 +77,26 @@ class CreateArticle extends Component
 
         // Auth::user()->articles()->save($article);
 
-        session()->flash('message','Annuncio salvato correttamente');
+        session()->flash('message', 'Annuncio salvato correttamente');
 
 
         $this->cleanForm();
     }
 
     public function updated($propertyName)
-        {
-         $this->validateOnly($propertyName);
-        }
+    {
+        $this->validateOnly($propertyName);
+    }
 
-            public function cleanForm()
-     {
-         $this->title = '';
-         $this->description = '';
-         $this->category = '';
-         $this->price = '';
-         $this->images = [];
-         $this->temporary_images = [];
-     }
+    public function cleanForm()
+    {
+        $this->title = '';
+        $this->description = '';
+        $this->category = '';
+        $this->price = '';
+        $this->images = [];
+        $this->temporary_images = [];
+    }
 
     public function render()
     {

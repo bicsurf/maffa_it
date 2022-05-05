@@ -53,9 +53,11 @@
                         <p class="text-danger mt-2">{{ $message }}</p>
                         @enderror
                     </div>
+                    <button type="submit" class="btn btn-primary btn-lg mt-3">Crea</button>
                 </form>
-                <button type="submit" class="btn btn-primary btn-lg mt-3">Crea</button>
+
             </div>
+
             <div class="col-12 col-md-6 d-flex">
                 @if (!empty($images))
                     <div class="col-12">

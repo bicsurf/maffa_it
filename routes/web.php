@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\RevisorController;
+use App\Http\Controllers\LavoraConNoiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,3 +42,6 @@ Route::get('/rendi/revisore/{user}',[RevisorController::class,'makeRevisor'])->n
 Route::get('/ricerca/annuncio', [RevisorController::class ,'searchArticles'])->name('articles.search');
 //cambio lingua
 Route::post('/lingua/{lang}',[PublicController::class,'setLanguage'])->name('set_language_locale');
+
+// Richiedi di lavorare con noi
+Route::post('/richiesta/lavoraconnoi', [LavoraConNoiController::class,'sendContact'])->name('send.contact');

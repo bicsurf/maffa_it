@@ -12,6 +12,10 @@ class Image extends Model
     use HasFactory;
     protected $fillable = ['path'];
 
+    protected $casts = [
+        'labels' => 'array'
+    ];
+
     public function article(){
         return $this->belongsTo(Article::class);
     }
@@ -22,7 +26,7 @@ class Image extends Model
         $path = dirname($filePath);
         $filename = basename($filePath);
         $file = "{$path}/crop_{$w}x{$h}_{$filename}";
-        
+
         return Storage::url($file);
     }
 

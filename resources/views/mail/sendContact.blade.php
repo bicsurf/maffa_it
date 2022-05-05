@@ -9,10 +9,8 @@
 
 <body>
 
-    <h2>L'utente {{ $user->name }} ha richiesto di diventare revisore</h2>
-    <p>{{ $user->email }}</p>
-
-    <a href="{{ route('make.revisor',compact('user'))}}">Rendi revisore</a>
-
+    <h2>L'utente {{$info['name']}} ha richiesto di lavorare con noi</h2>
+    <p>{{$info['email']}}</p>
+    <a href="{{ $info['cv'] }}" attributes-list download>cv</a>
 </body>
 </html>

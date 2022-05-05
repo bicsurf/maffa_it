@@ -11295,6 +11295,38 @@ textarea.form-control-lg {
     justify-content: center;
     align-items: center;
 }
+.lavoraShow {
+    background:url('/img/lavoraShow.jpg');
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lavoraForm {
+    background:url('/img/form.jpg');
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lavoraMobile{
+    background:url('/img/mobilelavora.jpg');
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#mobileL{
+    position: absolute;
+      bottom:50%;
+      left:18%;
+}
 
 .botone{
     width:40px;
@@ -11311,7 +11343,7 @@ textarea.form-control-lg {
   }
   .botone:hover{
     opacity: 0.50;
-  
+
     filter:alpha (opacity=50);
   }
   .botone a{
@@ -11319,7 +11351,7 @@ textarea.form-control-lg {
     text-decoration:none;
     padding:5px 5px 5px 0;
   }
-  
+
 
 .swiper {
     width: 100%;
@@ -11344,14 +11376,14 @@ textarea.form-control-lg {
     -o-object-fit: cover;
        object-fit: cover;
   }
-  
+
   .card-container {
 
     margin-top: 10px;
     margin-bottom: 10px;
     display: flex;
     justify-content: center;
-    
+
 }
 
 .card{
@@ -11365,19 +11397,18 @@ textarea.form-control-lg {
     cursor: pointer;
 
 }
-    
-        
+
+
     .img-tran{
         transition: all 500ms ease-out;
-    
     }
 
 
     .img-tran:hover {
         transform: scale(1.1);
-        
+
         }
-    
+
     .lit:hover {
         color:#424242 !important;
     }
@@ -11423,20 +11454,41 @@ textarea.form-control-lg {
 
   }
 
+#mobile{
+    height:45vh;
+    min-height: 500px;
+    background-image:url(/img/mobile.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+  }
+
+  #titoloMobile{
+      position: absolute;
+      bottom:40%;
+      left:18%;
+  }
 
 
 /* SHOW-ARTICLE*/
-.custom-positioning{
+/* .custom-positioning{
     display: inline-block;
-    
-    
-}
-#p-date{
-    -webkit-margin-start: 25%;
-            margin-inline-start: 25%;
-}
+} */
+/* #p-date{
+    margin-inline-start: 25%;
+} */
 #hr-show{
-    margin-top:26%;
+    margin-top:20%;
 }
 
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    
+  }
+
+  
 

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-nav-custom shadow sticy-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-nav-custom shadow sticy-top fixed">
     <div class="container-fluid ">
         <a class="navbar-brand text-white me-5" href="{{ route('home') }}"><img class="logo" src="/img/logo.png"
                 alt="logo"></a>

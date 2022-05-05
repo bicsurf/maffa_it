@@ -72,7 +72,7 @@
             </ul>
             {{-- revisore --}}
             @if (Auth::user() && Auth::user()->is_revisor)
-                <li class="nav-item me-3 li-none">
+                <li class=" me-3 li-none">
                     <a class="nav-link text-light btn btn btn-custom btn-sm position-relative" aria-current="page"
                         href="{{ route('revisor.index') }}">{{__('ui.navbarReviewer') }}
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">

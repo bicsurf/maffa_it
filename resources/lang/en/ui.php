@@ -7,7 +7,7 @@ return [
     'navbarCreateAd'=>'Create ad',
     'navbarPlaceholder'=>'Search Here...',
     'navbarSearch'=>'Search',
-    'navbarTongue'=>'Tongue',
+    'navbarTongue'=>'Language',
     'navbarReviewer'=>'Reviewer',
     'navbarRegister'=>'Register',
     // End Navbar
@@ -42,6 +42,4 @@ return [
     'footerContacted'=>'Enter your email and you will be contacted as soon as possible',
     'footerSend'=>'Send!',
     // End Footer
-
-
 ];

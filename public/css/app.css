@@ -11319,41 +11319,41 @@ textarea.form-control-lg {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .login{
     background:url('/img/login.jpg');
-    height: 75vh;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-.registro{
-    background:url('/img/registro.jpg');
-    height: 75vh;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-.crea{
-    background:url('/img/anunciocrea.jpg');
     height: 100vh;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-
+}
+.registro{
+    background:url('/img/registro.jpg');
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+}
+.crea{
+    background:url('/img/anunciocrea.jpg');
+    height: 100%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+.noArticles{
+    background:url('/img/noncisono.jpg');
+    height: 100vh;
+    background-size: cover;
 }
 
 #mobileL{
     position: absolute;
-      bottom:50%;
-      left:18%;
+    bottom:50%;
+    left:18%;
 }
 
 .botone{
@@ -11515,8 +11515,7 @@ textarea.form-control-lg {
     bottom: 20px;
     right: 20px;
     display: none;
-    
+
   }
 
-  
 

@@ -26,7 +26,7 @@ class CreateArticle extends Component
     public $images = [];
 
     protected $rules = [
-        'title' => 'required|min:5|max:16',
+        'title' => 'required|min:5|max:25',
         'description' => 'required|min:20|max:500',
         'category' => 'required',
         'price' => 'required|min:1|max:9999|numeric',
@@ -74,7 +74,7 @@ class CreateArticle extends Component
                 new GoogleVisionSafeSearch($newImage->id),
                 new GoogleVisionLabelImage($newImage->id),
                 ])->dispatch($newImage->id);
-               
+
             }
 
             File::deleteDirectory(storage_path('/app/livewire-tmp'));

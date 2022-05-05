@@ -137,52 +137,35 @@
         </button>
     </div>
     @else
-
-
 <div class="container">
     <div class="row  justify-content-center">
         <div class="col-6 my-3 d-flex justify-content-center ">
         <a href="{{ route('categoryShow', '1') }} "><img src="/img/fotografia.jpg"
                 class="rounded-circle btn shadow my-2"></a>
         </div>
-
         <div class="col-6 my-3 d-flex justify-content-center">
             <a href="{{ route('categoryShow', '2') }} "><img src="/img/telefonia.jpg"
                     class="rounded-circle btn shadow my-2"></a>
         </div>
-
         <div class="col-6 my-3 d-flex justify-content-center">
             <a href="{{ route('categoryShow', '3') }} "><img src="/img/juegos.jpg"
                     class="rounded-circle btn shadow my-2"></a>
-
         </div>
-
-
         <div class="col-6 my-3 d-flex justify-content-center">
             <a href="{{ route('categoryShow', '4') }} "><img src="/img/audiovideo.jpg"
                     class="rounded-circle btn shadow my-2"></a>
-
         </div>
-
         <div class="col-6 my-3 d-flex justify-content-center">
             <a href="{{ route('categoryShow', '5') }} "><img src="/img/animali.jpg"
                     class="rounded-circle btn shadow  my-2"></a>
-
         </div>
         <div class="col-6 my-3 d-flex justify-content-center">
             <a href="{{ route('categoryShow', '6') }} "><img src="/img/musicafilm.jpg"
                     class="rounded-circle btn shadow my-2"></a>
-
         </div>
     </div>
 </div>
-
-
-
-
-
 @enddesktop
-
     {{-- lavora con noi --}}
     <div class="boxLavora">
         <div class="container h-100">

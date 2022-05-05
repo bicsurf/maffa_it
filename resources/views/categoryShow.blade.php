@@ -1,8 +1,8 @@
 <x-layout>
-    <div class="container-fluid my-5">
+    <div class="container-fluid">
         <div class="row justify-content-center">
             @forelse ($category->articles->where('is_accepted', true)->sortByDesc('created_at') as $article)
-                <div class="col-12 col-md-4 d-flex justify-content-center mb-3 ">
+                <div class="col-12 col-md-4 d-flex justify-content-center my-5">
                     <div class="card lit shadow">
                         <img src="{{ !$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300):'https://picsum.photos/200'}}" class="card-img-top img-tran" alt="Immagine Articolo">
                         <div class="card-body">
@@ -17,13 +17,14 @@
                     </div>
                 </div>
             @empty
-                
+            <div class="noArticles">
                 <div class="col-12 text-center my-5">
                     <h1>ATTENZIONE:</h1>
                     <p class="h1">Non sono presenti annunci per questa categoria</p>
                     <h2 class="mt-5">Vuoi pubblicarne uno?</h2>
-                    <a href="{{ route('article.create') }}" class="btn btn-primary mt-4">Crea nuovo annuncio</a>
+                    <a href="{{ route('article.create') }}" class="btn btn-primary bg-gradient mt-4">Crea nuovo annuncio</a>
                 </div>
+            </div>
             @endforelse
         </div>
     </div>

@@ -4,18 +4,18 @@ return [
     'navbarHome'=>'Home',
     'navbarAds'=>'Anuncios',
     'navbarCategories'=>'Categorías',
-    'navbarCreateAd'=>'Crear anuncio',
+    'navbarCreateAd'=>'Crea anuncio',
     'navbarPlaceholder'=>'Busca aquí...',
     'navbarSearch'=>'Busca',
-    'navbarTongue'=>'Lengua',
-    'navbarReviewer'=>'Crítico',
-    'navbarRegister'=>'Regístrate ahora',
+    'navbarTongue'=>'Idiomas',
+    'navbarReviewer'=>'Administrador',
+    'navbarRegister'=>'Regístrate',
     // End Navbar
     'allTitles'=>'Bienvenidos a Maffa.it',
     'allProduct'=>'PRODUCTOS',
     'allCategories'=>'CATEGORIAS',
     // Card degli annunci
-    'cardPostedOn'=>'Publicado en: ',
+    'cardPostedOn'=>'Publicado el: ',
     'cardCategory'=>'Categoría: ',
     'cardViewProduct'=>'Ver el producto',
     // End Card degli annunci
@@ -29,19 +29,17 @@ return [
     'categoryBicycles'=>'Bicicletas',
     'categoryCarAccessories'=>'Accesorios de coche',
     'categoryBooksMagazines'=>'Libros y revistas',
-    'categoryDomestic'=>'Usos domésticos',
+    'categoryDomestic'=>'Electrodomésticos',
     // End Icone rotonde delle Categorie
     // Card Annunci
 
     // End Card Annunci
     // Footer
     'footerAddress'=>'Dirección',
-    'footerWork'=>'¿Trabajas con nosotros?',
-    'footerRegister'=>'¡Regístrese y haga clic aquí!',
-    'footerReviewer'=>'Conviértete en revisor',
-    'footerContacted'=>'Ingresa tu email y serás contactado a la brevedad',
+    'footerWork'=>'¿Quieres trabajar con nosotros?',
+    'footerRegister'=>'¡Regístrate aquí!',
+    'footerReviewer'=>'Conviértete en Administrador',
+    'footerContacted'=>'Ingresa tu email y serás contactado lo más pronto',
     'footerSend'=>'Enviar!',
     // End Footer
-
-
 ];

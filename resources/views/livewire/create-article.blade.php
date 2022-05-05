@@ -1,7 +1,4 @@
-<div class="crea"> 
-
-
-
+<div class="crea">
     {{-- Title && alert --}}
     <div class="container">
         <div class="row">
@@ -15,9 +12,7 @@
                 
             </div>
         </div>
-    </div>
     {{-- Form --}}
-    <div class="container mt-3">
         <div class="row">
             <div class="col-12 col-md-6">
                 <div class="container">
@@ -67,7 +62,7 @@
                                 </div>
                                 
                                 @if (!empty($images))
-                                <div class="row">
+                                
                                     <div class="col-12">
                                         <p>Photo preview:</p>
                                         <div class="row border border-4 border-info rounded shadow py-4">
@@ -80,11 +75,8 @@
                                             @endforeach
                                         </div>
                                     </div>
-                                </div>
+                                
                                 @endif
-                                
-                                
-                                {{-- div categorie e paesi --}}
                                 <button type="submit" class="btn btn-primary">Crea</button>
                             </form>
                         </div>

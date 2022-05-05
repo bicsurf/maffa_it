@@ -1,5 +1,4 @@
 <x-layout>
-    <div style="height: 20vh;"></div>
     <div class="container-fluid bg-gradient bg-primary shadow mb-4">
         <div class="row">
             <div class="col-12 text-light p-2">
@@ -9,7 +8,6 @@
             </div>
         </div>
     </div>
-    <div style="height: 40vh;"></div>
     @if ($announcement_to_check)
         <div class="container mt-5">
             <div class="row d-flex justify-content-center">

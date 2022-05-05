@@ -11324,7 +11324,7 @@ textarea.form-control-lg {
 
 .login{
     background:url('/img/login.jpg');
-    height: 100vh;
+    height: 75vh;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -11333,7 +11333,7 @@ textarea.form-control-lg {
 }
 .registro{
     background:url('/img/registro.jpg');
-    height: 100vh;
+    height: 75vh;
     background-size: cover;
     display: flex;
     justify-content: center;

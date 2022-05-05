@@ -41,7 +41,7 @@
 
 .login{
     background:url('/img/login.jpg');
-    height: 100vh;
+    height: 75vh;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -50,7 +50,7 @@
 }
 .registro{
     background:url('/img/registro.jpg');
-    height: 100vh;
+    height: 75vh;
     background-size: cover;
     display: flex;
     justify-content: center;

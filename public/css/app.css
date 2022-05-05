@@ -11322,6 +11322,34 @@ textarea.form-control-lg {
 
 }
 
+.login{
+    background:url('/img/login.jpg');
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.registro{
+    background:url('/img/registro.jpg');
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.crea{
+    background:url('/img/anunciocrea.jpg');
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
 #mobileL{
     position: absolute;
       bottom:50%;

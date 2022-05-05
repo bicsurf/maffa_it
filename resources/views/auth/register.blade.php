@@ -1,4 +1,7 @@
 <x-layout> 
+
+    <div class="registro">
+       
     @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
@@ -36,6 +39,8 @@
             </div>
         </div>
     </div>
+
+</div>
 </x-layout>
 
 

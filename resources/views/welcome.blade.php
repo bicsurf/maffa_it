@@ -39,7 +39,7 @@
                                         <h2 class="card-title">{{ Str::limit(" $article->title", 16, '') }}</h2>
                                         <p class="card-text">{{ Str::limit("$article->description", 15, '...') }}
                                         </p>
-                                        <p class="card-text fs-4 fw-bold">{{ $article->price }}€</p>
+                                        <p class="card-text fs-4 fw-bold">{{ $article->price }} €</p>
                                         {{-- <p class="fst-italic" href="#">{{__('ui.cardPostedOn') }}
                                             {{ $article->created_at->format('d/m/Y') }}</p> --}}
                                         {{-- <a class="text-dark" href="{{ route('categoryShow', ['category' => $article->category]) }}">{{__('ui.cardCategory') }} {{ $article->category->name }}</a> --}}
@@ -188,6 +188,7 @@
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12 text-start">
+                    <h5 style="color:#D6680B">IL LAVORO A PORTATA DI UN CLICK</h5>
                     <h1 class="fw-light">Lavora con noi!</h1>
                     <p class="lead">Hai volontà, motivazione e spirito d’iniziativa? <br>Siamo alla ricerca di
                         te! L'esperienza che porterai con te <br>ci aiuterà a offrire un servizio da remoto di

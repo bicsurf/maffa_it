@@ -2,16 +2,16 @@
     <div class="container-fluid my-5">
         <div class="row justify-content-center">
             @forelse ($category->articles->where('is_accepted', true)->sortByDesc('created_at') as $article)
-                <div class="col-12  d-flex justify-content-center mb-3 ">
+                <div class="col-12 col-md-4 d-flex justify-content-center mb-3 ">
                     <div class="card lit shadow">
                         <img src="{{ !$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300):'https://picsum.photos/200'}}" class="card-img-top img-tran" alt="Immagine Articolo">
                         <div class="card-body">
-                            <h6 class="card-title">{{ $article->user->name }}</h6>
+                            {{-- <h6 class="card-title">{{ $article->user->name }}</h6> --}}
                             <h2 class="card-title">{{ $article->title }}</h2>
                             <p class="card-text">{{ Str::limit("$article->description", 15, '...') }}</p>
-                            <p class="card-text">{{ $article->price }}</p>
-                            <p class="my-2 d-flex justify-center" href="#">Pubblicato il: {{ $article->created_at->format('d/m/Y') }}</p>
-                            <a class="me-3 text-dark my-5" href="#">Categoria: {{ $article->category->name }}</a>
+                            <p class="card-text fs-4 fw-bold">{{ $article->price }} €</p>
+                            {{-- <p class="my-2 d-flex justify-center" href="#">Pubblicato il: {{ $article->created_at->format('d/m/Y') }}</p> --}}
+                            {{-- <a class="me-3 text-dark my-5" href="#">Categoria: {{ $article->category->name }}</a> --}}
                             <a href="{{ route('showArticle', compact('article')) }}" class="btn bg-primary bg-gradient text-light"> Visualizza Prodotto </a>
                         </div>
                     </div>

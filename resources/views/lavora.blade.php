@@ -1,9 +1,11 @@
 <x-layout>
+
+    @desktop
     <div class="lavoraShow">
         <div class="container-fluid h-100">
             <div class="row d-flex h-100 justify-content-end align-items-center me-4">
                 <div class="col-12 text-end">
-                    <h5>IL LAVORO A PORTATA DI UN CLICK</h5>
+                    <h5 style="color:#D6680B">IL LAVORO A PORTATA DI UN CLICK</h5>
                     <h1 class="fw-light">Dove potrai svolgere il tuo lavoro?</h1>
                     <p class="lead">Puoi lavorare da remoto, ovunque tu ti trovi in Italia.<br>
                         Basta avere una connessione internet, da computer, tablet o telefono!
@@ -12,6 +14,21 @@
             </div>
         </div>
     </div>
+@else
+<div class="lavoraMobile">
+    <div class="container-fluid">
+        <div class="row d-flex justify-content-center">
+            <div class="col-8" id="mobileL">
+                <h5 class="fs-5" style="color:#D6680B">IL LAVORO A PORTATA DI UN CLICK</h5>
+                <h1 class="fw-light fs-4 fw-bold">Dove potrai svolgere il tuo lavoro?</h1>
+                <p class="lead fs-5">Puoi lavorare da remoto, ovunque tu ti trovi in Italia.
+                    Basta avere una connessione internet, da computer, tablet o telefono!
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+@enddesktop
 
 
     <div class="lavoraForm">
@@ -24,7 +41,7 @@
                     </p>
                     
                 </div>
-                <div class="col-12 col-md-5 text-start" style="border:2px solid #0d6efd; border-radius:30px;">
+                <div class="col-12 col-md-5 text-start mb-4" style="border:2px solid #0d6efd; border-radius:30px;">
                     <form method="POST" action="{{route('send.contact')}}" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3">

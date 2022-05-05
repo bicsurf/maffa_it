@@ -137,12 +137,14 @@
 {{-- lavora con noi --}}
 
 
-  <div id="boxLavora" class="container h-100" >
-    <div class="row h-100 align-items-center">
-      <div class="col-12 text-start">
-        <h1 class="fw-light">Lavora con noi!</h1>
-        <p class="lead">Hai volontà, motivazione e spirito d’iniziativa? <br>Siamo alla ricerca di te! L'esperienza che porterai con te <br>ci aiuterà a offrire un servizio da remoto di eccellenza. <br>Abbiamo bisogno di una persona brava, ma brava davvero.<br> Potresti essere tu.</p>
-        <a href="" class="btn bg-primary bg-gradient text-light"> ENVIA LA CANDIDATURA </a>
+  <div class="boxLavora" >
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-12 text-start">
+          <h1 class="fw-light">Lavora con noi!</h1>
+          <p class="lead">Hai volontà, motivazione e spirito d’iniziativa? <br>Siamo alla ricerca di te! L'esperienza che porterai con te <br>ci aiuterà a offrire un servizio da remoto di eccellenza. <br>Abbiamo bisogno di una persona brava, ma brava davvero.<br> Potresti essere tu.</p>
+          <a href="" class="btn bg-primary bg-gradient text-light"> ENVIA LA CANDIDATURA </a>
+        </div>
       </div>
     </div>
   </div>

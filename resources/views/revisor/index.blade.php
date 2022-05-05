@@ -1,17 +1,19 @@
 <x-layout>
-    <div class="container-fluid p-5 bg-gradient bg-primary p-5 shadow mb-4">
+    <div style="height: 20vh;"></div>
+    <div class="container-fluid bg-gradient bg-primary shadow mb-4">
         <div class="row">
-            <div class="col-12 text-light p-5">
-                <h1 class="display-2">
-                    {{ $announcement_to_check ? 'Ecco l\'annuncio da revisionare' : 'Non ci sono annunci da revisionare' }}
+            <div class="col-12 text-light p-2">
+                <h1 class="display-4 text-center">
+                    {{ $announcement_to_check ? 'Gli annunci da revisionare' : 'Non ci sono annunci da revisionare' }}
                 </h1>
             </div>
         </div>
     </div>
+    <div style="height: 40vh;"></div>
     @if ($announcement_to_check)
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-4 my-3">
+        <div class="container mt-5">
+            <div class="row d-flex justify-content-center">
+                <div class="col-12 col-md-4">
                     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                         @if ($announcement_to_check->images)
                             <div class="carousel-inner">
@@ -70,43 +72,55 @@
                         </button>
                     </div>
                 </div>
-                <div class="col-12 col-md-7">
+                {{-- Informazioni annuncio da pubblicare --}}
+                <div class="col-12 col-md-7 h-75 ms-3 mb-5 border shadow rounded">
                     <h1 class="text-center">{{ $announcement_to_check->title }}</h1>
                     <hr>
-                    <a href="{{ route('categoryShow', ['category' => $announcement_to_check->category]) }}"
-                        class="my-2 border-top pt-2 border-dark card-link shadow btn bg-primary bg-gradient text-light">{{ $announcement_to_check->category->name }}</a>
-                    <h5 class="card-text">Prezzo: {{ $announcement_to_check->price }} €</h5>
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-12 col-md-6">
+                            <a href="{{ route('categoryShow', ['category' => $announcement_to_check->category]) }}"
+                                class="shadow btn btn-primary">{{ $announcement_to_check->category->name }}</a>
+                        </div>
+                        <div class="col-12 col-md-6 d-flex align-items-center justify-content-end">
+                            <h5 class="card-text fs-4">Prezzo: {{ $announcement_to_check->price }} €</h5>
+                        </div>
+                    </div>
                     <hr>
                     <h5>Descrizione :</h5>
                     <p class="card-text">{{ $announcement_to_check->description }}</p>
                     <hr id="hr-show">
-                    <h5 class="card-text custom-positioning">Contatta subito
-                        <a href=""><strong>{{ $announcement_to_check->user->name ?? '' }}</strong></a> per avere più informazioni a
-                        riguardo
-                    </h5>
-                    <p id="p-date" class="card-text custom-positioning">Pubblicato il:
-                        {{ $announcement_to_check->created_at->format('d/m/Y') }} </p>
+                    <div class="container">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-12 col-md-12 text-center">
+                                <h5>Contatta subito
+                                    <a href=""><strong>{{ $announcement_to_check->user->name ?? '' }}</strong></a> per avere più informazioni a riguardo
+                                </h5>
+                            </div>
+                            <div class="col-12 col-md-6 text-center">
+                                <p>Pubblicato il:
+                                    {{ $announcement_to_check->created_at->format('d/m/Y') }} </p>
+                            </div>
+                            {{-- Bottoni accetta/rifiuta annuncio --}}
+                            <div class="container mt-4 mb-5">
+                                <div class="row justify-content-center">
+                                    <div class="col-12 col-md-2 d-flex justify-content-center">
+                                        <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#acceptModal">
+                                            Accetta
+                                        </button>
+                                    </div>
+                                    <div class="col-12 col-md-2 d-flex justify-content-center">
+                                        <button type="button" class="btn btn-danger btn-lg" data-bs-toggle="modal" data-bs-target="#rejectModal">
+                                            Rifiuta
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                {{-- Semafori validazione immagine caricata dall'utente --}}
-
             </div>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-6 d-flex justify-content-center">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#acceptModal">
-                        Accetta
-                    </button>
-                </div>
-                <div class="col-12 col-md-6 d-flex justify-content-center">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#rejectModal">
-                        Rifiuta
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="modal fade" id="acceptModal" tabindex="-1" aria-labelledby="acceptModalLabel"
-            aria-hidden="true">
+        <div class="modal fade" id="acceptModal" tabindex="-1" aria-labelledby="acceptModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">

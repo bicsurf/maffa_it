@@ -55,7 +55,7 @@ class GoogleVisionSafeSearch implements ShouldQueue
         $racy = $safe->getRacy();
 
         $likelihoodName = [
-            'text-secondary bi bi-suit-heart', 'text-success bi bi-suit-heart', 'text-success bi bi-suit-heart', 'text-warning bi bi-suit-heart','text-warning bi bi-suit-heart','text-danger bi bi-suit-heart'
+            'text-secondary bi bi-check-circle', 'text-success bi bi-check-circle', 'text-success bi bi-check-circle', 'text-warning bi bi-check-circle','text-warning bi bi-check-circle','text-danger bi bi-check-circle'
         ];
 
         $i->adult = $likelihoodName[$adult];

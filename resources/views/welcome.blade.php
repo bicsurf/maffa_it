@@ -136,8 +136,7 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    
-   @else
+    @else
 
 
 <div class="container">
@@ -155,25 +154,25 @@
         <div class="col-6 my-3 d-flex justify-content-center">
             <a href="{{ route('categoryShow', '3') }} "><img src="/img/juegos.jpg"
                     class="rounded-circle btn shadow my-2"></a>
-            
+
         </div>
-  
+
 
         <div class="col-6 my-3 d-flex justify-content-center">
             <a href="{{ route('categoryShow', '4') }} "><img src="/img/audiovideo.jpg"
                     class="rounded-circle btn shadow my-2"></a>
-            
+
         </div>
 
         <div class="col-6 my-3 d-flex justify-content-center">
             <a href="{{ route('categoryShow', '5') }} "><img src="/img/animali.jpg"
                     class="rounded-circle btn shadow  my-2"></a>
-            
+
         </div>
         <div class="col-6 my-3 d-flex justify-content-center">
             <a href="{{ route('categoryShow', '6') }} "><img src="/img/musicafilm.jpg"
                     class="rounded-circle btn shadow my-2"></a>
-           
+
         </div>
     </div>
 </div>

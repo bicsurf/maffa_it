@@ -27,7 +27,6 @@ window.addEventListener('DOMContentLoaded', function(){
 
       let mybutton = document.getElementById("btn-back-to-top");
 
-<<<<<<< HEAD
       // When the user scrolls down 20px from the top of the document, show the button
       window.onscroll = function () {
         scrollFunction();
@@ -50,12 +49,3 @@ window.addEventListener('DOMContentLoaded', function(){
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
       }
-=======
-// var myModal = document.getElementById('myModal')
-// var myInput = document.getElementById('myInput')
-
-// myModal.addEventListener('shown.bs.modal', function () {
-//   myInput.focus()
-// })
-
->>>>>>> 9694457f82fef5480a234aa1cb0d201fbb677b01

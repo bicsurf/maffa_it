@@ -3220,20 +3220,28 @@ __webpack_require__(/*! ./script.js */ "./resources/js/script.js");
   \********************************/
 /***/ (() => {
 
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 3,
-  spaceBetween: 30,
-  slidesPerGroup: 3,
-  loop: true,
-  loopFillGroupWithBlank: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev"
+window.addEventListener('DOMContentLoaded', function () {
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    slidesPerGroup: 3,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    }
+  });
+
+  if (screen.width < 705) {
+    swiper.params.slidesPerView = 1;
+    swiper.params.slidesPerGroup = 1;
   }
+<<<<<<< HEAD
 });
 var mybutton = document.getElementById("btn-back-to-top"); // When the user scrolls down 20px from the top of the document, show the button
 
@@ -3256,6 +3264,13 @@ function backToTop() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+=======
+}); // var myModal = document.getElementById('myModal')
+// var myInput = document.getElementById('myInput')
+// myModal.addEventListener('shown.bs.modal', function () {
+//   myInput.focus()
+// })
+>>>>>>> 9694457f82fef5480a234aa1cb0d201fbb677b01
 
 /***/ }),
 

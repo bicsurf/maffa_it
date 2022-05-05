@@ -164,6 +164,21 @@
 
   }
 
+#mobile{
+    height:45vh;
+    min-height: 500px;
+    background-image:url(/img/mobile.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+  }
+
+  #titoloMobile{
+      position: absolute;
+      bottom:40%;
+      left:18%;
+  }
 
 
 /* SHOW-ARTICLE*/

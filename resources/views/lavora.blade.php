@@ -16,34 +16,50 @@
 
     <div class="lavoraForm">
         <div class="container h-100">
-            <div class="row h-100 align-items-center">
-                <div class="col-12 text-start">
-                    <img cl src="/img/logo.png" width="120" class="my-5">
-                    <h5>COMPLETAMENTE REMOTO</h5>
+            <div class="row d-flex h-100 align-items-center">
+                <div class="col-12 col-md-5 text-start">
+                    <img src="/img/logo.png" width="120" class="my-5">
+                    <h5>COMPLETAMENTE DA REMOTO</h5>
                     <p class="lead">Siamo alla ricerca di te! 
                     </p>
                     
                 </div>
-                <div class="col-12 text-start">
-                    
-                    {{-- <form>
+                <div class="col-12 col-md-5 text-start" style="border:2px solid #0d6efd; border-radius:30px;">
+                    <form method="POST" action="{{route('send.contact')}}" enctype="multipart/form-data">
+                        @csrf
                         <div class="mb-3">
-                          <label for="exampleInputEmail1" class="form-label">Email address</label>
-                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                            <label for="exampleInputEmail1" class="form-label fs-4">Nome</label>
+                            <input type="text" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                         </div>
                         <div class="mb-3">
-                          <label for="exampleInputPassword1" class="form-label">Password</label>
-                          <input type="password" class="form-control" id="exampleInputPassword1">
+                            <label for="exampleInputEmail1" class="form-label fs-4">Cognome</label>
+                            <input type="text" name="surname" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                         </div>
-                        <div class="mb-3 form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        <div class="mb-3">
+                            <label for="exampleDataList" class="form-label fs-4">Città di Domicilio</label>
+                            <input class="form-control" name="city" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+                            <datalist id="datalistOptions">
+                            <option value="Milano">
+                            <option value="Torino">
+                            <option value="Bologna">
+                            <option value="Bari">
+                            <option value="Roma">
+                            </datalist>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                      </form> --}}
-
-                    
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label fs-4">Numero di Telefono</label>
+                            <input type="number" name="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label fs-4">Indirizzo email</label>
+                            <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="formFileMultiple" class="form-label fs-4">Carica CV</label>
+                            <input class="form-control" name="cv" type="file" id="formFileMultiple" multiple>
+                          </div>
+                        <button type="submit" class="btn btn-primary m-2">Invia</button>
+                    </form>
                 </div>
 
             </div>

@@ -81,7 +81,7 @@
                     <p class="card-text">{{ $announcement_to_check->description }}</p>
                     <hr id="hr-show">
                     <h5 class="card-text custom-positioning">Contatta subito
-                        <a href="{{ $user->name }}"><strong>{{ $announcement_to_check->user->name ?? '' }}</strong></a> per avere più informazioni a
+                        <a href=""><strong>{{ $announcement_to_check->user->name ?? '' }}</strong></a> per avere più informazioni a
                         riguardo
                     </h5>
                     <p id="p-date" class="card-text custom-positioning">Pubblicato il:

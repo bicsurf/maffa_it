@@ -84,7 +84,7 @@
                         </div>
                     </div>
                     <hr>
-                    <h5>Descrizione :</h5>
+                    <h5>Descrizione: </h5>
                     <p class="card-text">{{ $announcement_to_check->description }}</p>
                     <hr id="hr-show">
                     <div class="container">
